@@ -23,7 +23,7 @@ LOG = MyLog(BASE_PATH, 'log.log')
 if __name__ == '__main__':
     try:
         LOG.logger.info('========================schedule============================')
-        run(BASE_PATH, parsing(sys.argv[1]), sys.argv[2])
+        run(BASE_PATH, parsing(sys.argv[1]), sys.argv[2], LOG)
     except Exception as e:
         LOG.logger.error(e)
         LOG.logger.info('========================schedule end========================')
